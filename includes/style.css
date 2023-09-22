@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inactive {
+    display: none;
+}
+
+.wrong {
+    display: block;
+    color: red;
+}
