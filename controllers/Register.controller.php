@@ -1,9 +1,8 @@
 <?php
 
     session_start();
-    function cleanSession() {
     session_unset();
-}
+
 
 
 require "./models/User.php";
@@ -16,23 +15,28 @@ $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 // var_dump($currentUser->getUserName($_POST['username']) !== false);
 
-if ($currentUser->getUserName($_POST['username']) !== false) {
-    cleanSession();
+if ($_POST['submit'] == 'Login') {
+    session_destroy();
+    header("location: /login");
+}
+
+else if ($currentUser->getUserName($_POST['username']) !== false) {
+    session_unset();
     $_SESSION['usernameTaken'] = 'wrong';
     header("location: /register");
 
 } else if ($currentUser->getEmail($_POST['email']) !== false) {
-    cleanSession();
+    session_unset();
     $_SESSION['emailTaken'] = 'wrong';
     header("location: /register");
 
 } else if (!preg_match("/^[\w._%+-]{1,}@[\w.+-]{1,}\.[a-z]{2,3}$/m", $_POST['email'])) {
-    cleanSession();
+    session_unset();
     $_SESSION['emailNotValid'] = 'wrong';
     header("location: /register");
 
 } else if ($_POST['password'] !== $_POST['passwordCheck']) {
-    cleanSession();
+    session_unset();
     $_SESSION['passwordsDontMatch'] = 'wrong';
     header("location: /register");
     

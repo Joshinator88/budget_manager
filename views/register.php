@@ -1,30 +1,16 @@
 <?php
 
-require_once "./database/Database.php";
 session_start(); 
-
-$database = new Database();
-
-$database->connect();
+require_once "./includes/header.php";
 
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./../includes/style.css">
-</head>
-<body>
+
 <h1>Register</h1>
 
-<?php var_dump($_SESSION) ?>
 
-
-<form action="/processing" method="POST">
+<form action="/processing/registration" method="POST">
 
     <span class="inactive <?php echo $_SESSION['usernameTaken']; ?>">This username is already taken</span>
     <label for="username">Username</label>
@@ -43,6 +29,8 @@ $database->connect();
     <input type="password" name="passwordCheck" id="passwordCheck">
 
     <input type="submit" name="submit" id="sumit" value="Register">
+    <input type="submit" name="submit" id="sumit" value="Login">
+
 
 </form>
     

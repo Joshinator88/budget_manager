@@ -18,8 +18,16 @@ switch ($request) {
         require __DIR__ . '/views/register.php';
         break;
 
-    case '/processing':
-        require __DIR__ . '/controllers/Register.php';
+    case '/processing/registration':
+        require __DIR__ . '/controllers/Register.controller.php';
+        break;
+
+    case '/home':
+        require __DIR__ . '/views/home.php';
+        break;
+        
+    case '/processing/login':
+        require __DIR__ . '/controllers/Login.controller.php';
         break;
         
     default:

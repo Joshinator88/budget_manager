@@ -40,6 +40,21 @@ class User {
     private function show ($page) {
         require_once "./views/$page.php";
     }
+
+    public function getCredentials($username, $password) {
+
+        $sql = "SELECT * FROM users WHERE username=?";
+        $stmt = $this->pdo->connection->prepare($sql);
+        $stmt->execute([$username]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($username !== null && $password !== null && $username !== "" && $password !== "") {
+            return password_verify($password, $user['password']);
+        } else {
+            return false;
+        }
+
+    }
     
     
 
