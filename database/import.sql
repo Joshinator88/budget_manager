@@ -10,3 +10,7 @@ CREATE TABLE `users` (
     email VARCHAR(100) NOT NULL,
     password VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE `budgets` (
+    title VARCHAR
+)

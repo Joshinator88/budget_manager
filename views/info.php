@@ -1,4 +1,10 @@
-<?php require_once "./includes/header.php" ?>
+<?php 
+
+require_once "./includes/header.php";
+hoofd("Your Budget manager");
+
+?>
+
 
     <main>
         <section>

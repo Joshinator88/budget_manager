@@ -1,37 +1,29 @@
 <?php
 
+
+// TODO:
+// direct to controllers and return a view when we walked through a controller
+
 $request = $_SERVER['REQUEST_URI'];
-$viewDir = '/views/';
+$viewDir = './views/';
 
-switch ($request) {
+// change routing into this
+$routes = [
+    '/' => $viewDir . "info.php",
+    '' => $viewDir . "info.php",
+    '/login' => $viewDir . 'login.php',
+    '/register' => $viewDir . 'register.php',
+    '/home' => $viewDir . 'home.php',
+    '/processing/registration' => './controllers/Register.controller.php',
+    '/processing/login' => './controllers/Login.controller.php'
+];
 
-    case '':
-    case '/':
-        require __DIR__ . $viewDir . 'info.php';
-        break;
+require $routes[$_SERVER['REQUEST_URI']];
 
-    case '/login':
-        require __DIR__ . $viewDir . 'login.php';
-        break;
+// __DIR__ === ./; het is om vanaf de root het pad te volgen
 
-    case '/register':
-        require __DIR__ . '/views/register.php';
-        break;
-
-    case '/processing/registration':
-        require __DIR__ . '/controllers/Register.controller.php';
-        break;
-
-    case '/home':
-        require __DIR__ . '/views/home.php';
-        break;
-        
-    case '/processing/login':
-        require __DIR__ . '/controllers/Login.controller.php';
-        break;
-        
-    default:
-        http_response_code(404);
-        require __DIR__ . $viewDir . '404.php';
-}
+//     default:
+//         http_response_code(404);
+//         require __DIR__ . $viewDir . '404.php';
+// }
 

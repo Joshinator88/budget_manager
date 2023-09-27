@@ -49,6 +49,12 @@ class User {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($username !== null && $password !== null && $username !== "" && $password !== "") {
+            session_start();
+            $_SESSION['currentUser'] = [
+                'ID' => $user['ID'], 
+                'name' => $user['username'],
+                'email' => $user['email']
+            ];
             return password_verify($password, $user['password']);
         } else {
             return false;
