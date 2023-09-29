@@ -9,6 +9,10 @@ form {
     flex-direction: column;
 } */
 
+.burgerList {
+    list-style: none;
+}
+
 .inactive {
     display: none;
 }
@@ -16,6 +20,10 @@ form {
 .wrong {
     display: block;
     color: red;
+}
+
+.show {
+    display: block;
 }
 
 /* .btn {
