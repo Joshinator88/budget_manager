@@ -7,10 +7,7 @@ hoofd("register");
 
 ?>
 
-
-
-
-    <form class="w-50 mt-5 m-auto border border-info rounded p-1" action="/processing/registration" method="POST">
+    <form class="w-50 mt-5 m-auto border border-info rounded p-2 pt-3 pb-4" action="/processing/registration" method="POST">
         
         <h1 class="m-2">Register</h1>
 

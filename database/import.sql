@@ -12,5 +12,8 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `budgets` (
-    title VARCHAR
+    title VARCHAR(50) NOT NULL,
+    totalBudget MEDIUMINT NOT NULL,
+    currentBudget MEDIUMINT NOT NULL,
+    ownerID MEDIUMINT NOT NULL
 )

@@ -10,7 +10,7 @@ hoofd("Login");
 
 
     
-        <form class="w-50 mt-5 m-auto border border-info rounded p-1" action="/processing/login" method="POST">
+        <form class="w-50 mt-5 m-auto border border-info rounded p-2 pt-3 pb-4" action="/processing/login" method="POST">
             <h1 class="m-2">Login</h1>
 
             <span class="inactive <?php echo $_SESSION['wrongLogin'] ?>">There is no registered user with that combination password and username</span>

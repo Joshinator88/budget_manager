@@ -18,7 +18,7 @@ function hoofd ($title) {
         <header>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Budget_Manager</a>
+            <a class="navbar-brand" href="/home">Budget_Manager</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,28 +35,14 @@ function hoofd ($title) {
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/home">Home</a>
                     </li>
 
                 </ul>
             </div>
         
         
-            <!-- <div>
-                <h1>JB</h1>
-            </div>
-    
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-    
-            <ul>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
-            </ul>
-     -->
+            
         </header>
 
         <?php

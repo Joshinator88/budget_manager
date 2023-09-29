@@ -1,0 +1,5 @@
+<?php
+
+$usedTitle = "";
+$noTitle = "";
+$noBudget = "";

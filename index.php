@@ -13,7 +13,7 @@ $routes = [
     '' => $viewDir . "info.php",
     '/login' => $viewDir . 'login.php',
     '/register' => $viewDir . 'register.php',
-    '/home' => $viewDir . 'home.php',
+    '/home' =>  "./controllers/Home.controller.php",
     '/processing/registration' => './controllers/Register.controller.php',
     '/processing/login' => './controllers/Login.controller.php'
 ];

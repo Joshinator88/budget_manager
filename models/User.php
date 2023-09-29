@@ -20,7 +20,7 @@ class User {
         $stmt = $this->pdo->connection->prepare($sql);
         $stmt->execute([$email, $username, $password]);
 
-        $this->show("login");
+        header("location: /login");
     }
 
     public function getUserName ($username) {
