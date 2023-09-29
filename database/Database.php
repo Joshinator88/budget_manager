@@ -1,7 +1,5 @@
 <?php
 
-// hai
-
 class Database
 {
     public $connection;
